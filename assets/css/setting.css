@@ -1,0 +1,77 @@
+body{
+	background-repeat:no-repeat;
+	background-position:bottom right;
+	background-color:#F8F8FF;
+	background-attachment: fixed;
+}
+.typecho-option{
+	background:white;
+	border:1px solid #bababa;
+	-webkit-box-shadow:0 0 5px #808080;
+	box-shadow:0 0 5px #808080;
+	padding:2em;
+}
+.typecho-page-title{
+	position:absolute;
+	top:35px;
+	left:0;
+	right:0;
+	background:#00BFFF;
+	box-shadow:0 0 10px #808080;
+	-webkit-box-shadow:0 0 20px #808080;
+}
+.typecho-page-title h2{
+	text-align:center;
+	font-size:3em;
+	margin-top:100px;
+	color:white;
+	margin-bottom:100px;
+}
+.typecho-page-title h2:before{
+	content:"Mark主题 - ";
+}
+.typecho-option-tabs{
+    margin-top:260px;
+	z-index:100;
+	visibility:hidden;
+}
+.typecho-option-tabs li{
+	display:block;
+}
+input{
+	border-radius:0;
+}
+.btn{
+	position:fixed;
+	right:2em;
+	bottom:2em;
+	box-shadow:0 0 8px #808080;
+	-webkit-box-shadow:0 0 8px #808080;
+}
+.typecho-label{
+	font-size:1.2em;
+}
+.typecho-option input,.typecho-option textarea{
+	border:none;
+	border-radius:0;
+	font-size:1.15em;
+	margin:10px;
+	border-bottom:1px solid black;
+	padding:10px;
+}
+.alert{
+	text-align:center;
+	font-size:1.1em;
+	margin-left:10px;
+}
+.img-lg{
+	margin:-2em;
+	height:20em;
+	background:url('https://s2.ax1x.com/2019/03/02/kbqz9I.jpg');
+	background-repeat:no-repeat;
+	background-size:cover
+}
+.title{
+	font-size:2em;
+	margin-top:-0.4em;
+}
