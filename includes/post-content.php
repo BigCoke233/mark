@@ -1,6 +1,8 @@
 <?php 
-    //解析灯箱及图片描述
+    //解析灯箱、图片描述、表格、代码框
 	$content = preg_replace('/<img(.*?)src="(.*?)" alt="(.*?)" title="(.*?)"(.*?)>/s','<a data-fancybox="gallery" href="${2}"><img${1}src="${2}"${5}></a><span class="post-img-alt">${4}</span>',$this->content); 
+	$content = preg_replace('/<table(.*?)>/s','<table class="table table-striped table-hover">',$this->content);
+	$content = preg_replace('/<pre><code>/s','<pre><code class="language-html">',$this->content);
 	
 	//短代码（无参数）
 	$reg = '/\[scode\](.*?)\[\/scode\]/s';
