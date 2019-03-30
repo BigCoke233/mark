@@ -26,10 +26,21 @@
 	</div>
   </nav>
   
+  <!-- 首页大图 -->
+  <?php if($this->options->lgimg_url && $this->options->lgimg_url!='') :?>
+  <div class="jumbotron" style="background:url('<?php $this->options->lgimg_url(); ?>');background-size:cover;background-repeat:no-repeat;">
+    <h1><?php $this->options->IndexName(); ?></h1>
+	<p><?php $this->options->IndexDecoration(); ?></p>
+  </div>
+  <?php endif; ?>
+  
+  <?php if($this->options->lgimg_url && $this->options->lgimg_url='') :?>
   <br />
   <br />
   <br />
   <br />
+  <?php endif; ?>
   <br />
+  
   <!-- 能偷懒不写样式为什么不用br? -->
 </header>

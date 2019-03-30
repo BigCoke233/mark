@@ -84,7 +84,7 @@
 		background-repeat:no-repeat;
 		background-attachment:fixed;
 	}
-	.item,#nav,.list-group,.list-group li,.pagenav li,.page-navigator li,.comment-body{
+	.item,#nav,.pagenav li,.page-navigator li,.comment-body{
 		background:rgba(255,255,255,0.9)!important;
 	}
 	.footer-info{
@@ -93,6 +93,9 @@
 	.item{
     	box-shadow:0 0 8px #808080;
 	    -webkit-box-shadow:0 0 8px #808080;
+	}
+	.list-group,.list-group li{
+		background:rgba(255,255,255,0)
 	}
 	<?php endif; ?>
 	</style>

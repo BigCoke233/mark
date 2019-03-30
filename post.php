@@ -13,12 +13,12 @@
 	  <!-- 文章内容 -->
       
 	  <article class="item">
+	    <?php if($this->fields->banner && $this->fields->banner!='') :?>
 		<div class="post-banner">
-          <?php if($this->fields->banner && $this->fields->banner!='') :?>
 	      <div class="media-banner" style="background-position:center center;background:url(<?php $this->fields->banner(); ?>);background-repeat:no-repeat;background-size:cover;"></div>
-		  <?php else: ?>
-		  <div class="media-banner" style="background-position:center center;background:url(<?php $this->fields->default_banner(); ?>);background-repeat:no-repeat;background-size:cover;"></div>
-          <?php endif; ?>
+		</div>
+		<?php endif; ?>
+		
 		  <div class="post-header">
 		    <h2><?php $this->title() ?></h4>
 			<span>
@@ -27,13 +27,11 @@
 			  <i class="glyphicon glyphicon-comment"></i> <?php $this->commentsNum('%d'); ?>
 			</span>
           </div>
-		</div>
+		
+		<hr />
 		
 		<div class="post-content">
-	      <?php 
-		  $content = preg_replace('/<img(.*?)src="(.*?)"(.*?)>/s','<a data-fancybox="gallery" href="${2}"><img${1}src="${2}"${3}></a>',$this->content); 
-		  echo $content 
-		  ?>
+          <?php $this->need('includes/post-content.php'); ?>
 		</div>
 
 		<div class="post-footer">

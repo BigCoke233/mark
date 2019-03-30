@@ -7,7 +7,7 @@ function themeFields($layout) {
     $banner = new Typecho_Widget_Helper_Form_Element_Text('banner', NULL, NULL, _t('文章缩略图'), _t('填入一个图片url作为缩略图，显示在文章列表和文章页面顶部，不填写则没有缩略图'));
     $layout->addItem($banner);
 	
-	$type=new Typecho_Widget_Helper_Form_Element_Select('type',array('0'=>'一般文章','1'=>'说说'),'0','文章类型');
+	$type=new Typecho_Widget_Helper_Form_Element_Select('type',array('0'=>'一般文章','1'=>'说说','2'=>'小板式文章(New)'),'0','文章类型');
     $layout->addItem($type);
 }
 
@@ -39,9 +39,6 @@ function themeConfig($form) {
 	$site_create_time = new Typecho_Widget_Helper_Form_Element_Text('site_create_time', NULL, NULL, _t('网站建立时间'), _t('格式为 2010-09-10 00:00:00 即 年-月-日 时:分:秒'));
     $form->addInput($site_create_time);
 	
-	$default_banner = new Typecho_Widget_Helper_Form_Element_Text('default_banner', NULL, NULL, _t('默认头图'), _t('并非文章列表的默认缩略图，而是显示在文章内页的头图。'));
-    $form->addInput($default_banner);
-	
 	//侧边栏社交按钮配置
     $github = new Typecho_Widget_Helper_Form_Element_Text('github', NULL, NULL, _t('github主页地址'), _t('输入你的github主页地址，显示在侧边栏，不填写则不显示'));
     $form->addInput($github);
@@ -59,6 +56,9 @@ function themeConfig($form) {
     $bg_url = new Typecho_Widget_Helper_Form_Element_Text('bg_url', NULL, NULL, _t('背景图url'), _t('填入一个图片url作为背景图，填入背景图后自动设置透明度。'));
     $form->addInput($bg_url);
 	
+	$lgimg_url = new Typecho_Widget_Helper_Form_Element_Text('lgimg_url', NULL, NULL, _t('首页大图url'), _t('填入一个图片url作为首页大图，不填则不显示，填写后背景图失效。'));
+    $form->addInput($lgimg_url);
+	
     $custom_nav = new Typecho_Widget_Helper_Form_Element_Textarea('custom_nav', NULL, NULL, _t('自定义导航'), _t('用li标签结合a标签书写，若不清楚可以查看主题wiki，设置之后会直接覆盖默认的导航。'));
     $form->addInput($custom_nav);
 	
@@ -72,5 +72,5 @@ function themeConfig($form) {
     $pjax_reload = new Typecho_Widget_Helper_Form_Element_Textarea('pjax_reload', NULL, NULL, _t('Pjax重载函数'), _t('填入Pjax重载函数，不懂或者没有打开pjax请留空。'));
     $form->addInput($pjax_reload);
 }
-
+?>
 
