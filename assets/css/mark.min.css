@@ -31,6 +31,7 @@ a:hover,a:active{
 /* 文章及文章列表 */
 .post-item{
 	transition:all 0.5s;
+	overflow:hidden;
 }
 .post-item:hover{
 	box-shadow:0 2px 12px #ccc;
@@ -55,19 +56,20 @@ a:hover,a:active{
 .post-link:hover{
 	color:black;
 }
+.post-banner-sm{
+	margin-top:-15px;
+	margin-bottom:-15px;
+}
 .post-banner{
-	margin:-15px;
 	margin-bottom:10px;
+	margin:-15px;
+	padding:0;
 }
 .media-banner{
 	height:20em;
 }
-.pagenav,.page-navigator{
+.page-navigator{
 	margin-left:-40px;
-}
-.page-navigator .next{
-	float:right;
-	margin-right:-1px;
 }
 .pagenav li,.page-navigator li{
 	display:inline-block;
@@ -93,11 +95,7 @@ a:hover,a:active{
 }
 
 .post-header{
-	padding:15px;
-	background:rgba(5,5,5,0.5);
-	color:white;
 	border:none;
-	margin-top:-112px;
 }
 .post-bread{
 	font-weight:bold;
@@ -112,21 +110,19 @@ a:hover,a:active{
 }
 .post-content img{
 	max-width:100%;
-	border-radius:4px;
+	border-radius:2px;
 	box-shadow:0 0 5px #808080;
 	-webkit-box-shadow:0 0 5px #808080;
 	display:block;
 	margin:12px auto;
-	transition:all 0.5s;
+	transition:box-shadow 0.5s;
 }
 .post-content img:hover{
-    transform: translateY(-6px);
 	box-shadow:0 0 15px #808080;
 	-webkit-box-shadow:0 0 15px #808080;
 }
 .post-content p{
 	line-height:1.5em;
-	margin:15px;
 }
 .post-content h2{
 	border-left:3px solid #6495ED;
@@ -164,9 +160,35 @@ a:hover,a:active{
 }
 .saying-content{
 	margin-top:5px;
+	margin-left:10px;
+	margin-right:10px;
 }
-.post-header a{
+.saying-content h3{
+	margin-left:-10px;
+	font-weight:bold;
+	margin-top:0;
+}
+.saying-info{
+	margin-top:-10px;
+}
+.post-img-alt{
+	font-size:14px;
+	color:gray;
+	text-align:center;
+	display:block;
+	margin-top:-10px;
+}
+.read-more{
+	margin-top:-36px;
+}
+/* Nb首页大图 */
+.jumbotron{
+	height:50vh;
+	box-shadow:0 0 10px #808080;
 	color:white;
+	text-align:Center;
+	padding-top:20vh;
+	text-shadow:0 0 10px #bababa;
 }
 /* 评论 */
 .comment-normal-img{
@@ -236,6 +258,7 @@ a:hover,a:active{
 	color:#bababa;
 	font-size:10px;
 }
+
 
 /* owo */
 .OwO-logo{
@@ -557,6 +580,40 @@ a:hover,a:active{
 	right:0;
 	left:0;
 	transition:all 0.5s;
+}
+/* 文章内短代码 */
+.tip{
+	display:block;
+	padding:10px;
+	background-color:rgb(250,250,250);
+	border-left:5px solid #ddd;
+	border-radius:2px;
+	color:#A9A9A9;
+}
+.tip.lblue{
+	border-color:#4D90FE!important;
+	background-color:#F8F8FF!important;
+}
+.tip.yellow{
+	border-color:#FFD700!important;
+	background-color:#FFF8DC!important;
+}
+.tip.red{
+	border-color:#FF6347!important;
+	background-color:#FFE4E1!important;
+}
+.tip.green{
+	border-color:#3CB371!important;
+	background-color:rgb(243,247,230)!important;
+}
+.post-stext{
+	max-height:150px;
+	overflow:auto;
+	padding:5px;
+	padding-left:10px;
+	border:1px solid #ddd;
+	border-radius:4px;
+	box-shadow:0 0 1px #bababa inset;
 }
 
 /* 滚动条 */
