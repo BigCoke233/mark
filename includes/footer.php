@@ -129,6 +129,7 @@ $(document).ready(function(){
         document.getElementById("htmer_time").innerHTML = currentTimeHtml;
     }    setInterval(setTime, 1000);
 	</script>
-
+	
+    <?php $this->footer(); ?>
   </body>
 </html>

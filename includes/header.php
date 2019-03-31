@@ -1,7 +1,7 @@
 <header>
   <div id="top"></div>
   <!-- 导航栏 -->
-  <nav class="navbar navbar-default navbar-fixed-top" id="nav">
+  <nav class="navbar navbar-default navbar-fixed-top" id="nav" <?php if($this->options->lgimg_url && $this->options->lgimg_url!='') :?>style="opacity:0.8"<?php endif; ?>>
     <Div class="container-fluid">
       <div class="nav-logo">
 	    <span class="nav-logo-icon">
@@ -28,18 +28,17 @@
   
   <!-- 首页大图 -->
   <?php if($this->options->lgimg_url && $this->options->lgimg_url!='') :?>
-  <div class="jumbotron" style="background:url('<?php $this->options->lgimg_url(); ?>');background-size:cover;background-repeat:no-repeat;">
+  <div class="jumbotron" style="margin-bottom:-80px;background:url('<?php $this->options->lgimg_url(); ?>');background-size:cover;background-repeat:no-repeat;">
     <h1><?php $this->options->IndexName(); ?></h1>
 	<p><?php $this->options->IndexDecoration(); ?></p>
   </div>
   <?php endif; ?>
   
-  <?php if($this->options->lgimg_url && $this->options->lgimg_url='') :?>
+
   <br />
   <br />
   <br />
   <br />
-  <?php endif; ?>
   <br />
   
   <!-- 能偷懒不写样式为什么不用br? -->

@@ -58,6 +58,9 @@
 	  .mobile-block{
 		  display:block!important;
 	  }
+	  .mobile-center{
+		  text-align:Center;
+	  }
 	  #nav{
 		  padding:0!important;
 	  }

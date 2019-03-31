@@ -31,10 +31,11 @@
 		<div class="cold-md-9 col-xs-9" style="margin-top:-20px;">
 		  <h3><?php $this->sticky(); $this->title() ?></h3>
 		  <p class="excerpt">
-	       <?php $this->excerpt(66); ?>
+	       <?php $this->excerpt(50); ?>
+		   <br />
 	      </p>
-		  <hr />
-		  <div class="post-info"><span class="glyphicon glyphicon-th-large"></span> <?php $this->category(',', true, '木有分类'); ?> &nbsp;| &nbsp;<span class="glyphicon glyphicon-calendar"></span> <?php $this->date('F j, Y'); ?> &nbsp;| &nbsp;<Span class="glyphicon glyphicon-comment"></span> <?php $this->commentsNum('%d Comments'); ?></div>
+		  <hr class="mobile-none" />
+		  <div class="post-info"><span class="glyphicon glyphicon-th-large"></span> <?php $this->category(',', true, '木有分类'); ?> &nbsp;| &nbsp;<span class="glyphicon glyphicon-calendar"></span> <?php $this->date('F j, Y'); ?><span class="mobile-none"> &nbsp;| &nbsp;<Span class="glyphicon glyphicon-comment"></span> <?php $this->commentsNum('%d Comments'); ?></span></div>
 
 		</div>
 	  </div>
@@ -56,11 +57,12 @@
 
       <h2 class="index-post-header"><?php $this->sticky(); $this->title() ?></h4>
       <p class="excerpt">
-	       <?php $this->excerpt(100); ?>
+		<?php echo $this->excerpt(100); ?>
 	  </p>
 
 	  <hr />
-	
+	  
+
 	  <div class="post-info"><span class="glyphicon glyphicon-th-large"></span> <?php $this->category(',', true, '木有分类'); ?> &nbsp;| &nbsp;<span class="glyphicon glyphicon-calendar"></span> <?php $this->date('F j, Y'); ?> &nbsp;| &nbsp;<Span class="glyphicon glyphicon-comment"></span> <?php $this->commentsNum('%d Comments'); ?></div>
 	  <br />
 	</div>

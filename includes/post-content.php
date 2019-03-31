@@ -1,8 +1,11 @@
 <?php 
-    $content = preg_replace('/<table(.*?)>/s','<table class="table table-striped table-hover">',$this->content);
-	$content = preg_replace('/<pre><code>/s','<pre><code class="language-html">',$this->content);
-	$content = preg_replace('/<img(.*?)src="(.*?)"(.*?)>/s','<a data-fancybox="gallery" href="${2}"><img${1}src="${2}"${3}></a>',$this->content); 
 
+	$content = $this->content;
+	
+    $content = preg_replace('/<table(.*?)>/s','<table class="table table-striped table-hover">',$content);
+	$content = preg_replace('/<pre><code>/s','<pre><code class="language-html">',$content);
+	$content = preg_replace('/<img(.*?)src="(.*?)"(.*?)>/s','<a data-fancybox="gallery" href="${2}"><img${1}src="${2}"${3}></a>',$content); 
+	
 	//短代码（无参数）
 	$reg = '/\[scode\](.*?)\[\/scode\]/s';
     $rp = '<div class="tip">${1}</div>';
@@ -43,7 +46,6 @@
 	$reg = '/\[stext\](.*?)\[\/stext\]/s';
     $rp = '<div class="post-stext">${1}</div>';
     $content = preg_replace($reg,$rp,$content);
-	
-	
-	echo $content 
+
+  echo $content;
 ?>
