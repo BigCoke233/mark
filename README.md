@@ -31,7 +31,7 @@
 - [ ] 文章目录
 
 # 演示
-[Demo](http://markdemo.ccaeo.com/index.php/archives/3/)，托管免费空间使用免费二级域名，可能会报毒，有时间再解析成自己的域名。
+[Demo](https://cokewithice.com)
 
 # BUG
 暂未发现bug，如果有任何问题欢迎`issues`。
