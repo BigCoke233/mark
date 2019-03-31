@@ -38,7 +38,7 @@ a:hover,a:active{
 	-webkit-box-shadow:0 2px 12px #ccc;
 }
 .post-header{
-	margin-top:10px;
+	margin-top:20px;
 }
 .post-info{
 	margin-bottom:-20px;
@@ -79,10 +79,12 @@ a:hover,a:active{
 	-webkit-box-shadow:0 0 8px #ccc;
 	margin-right:7px;
 	padding:0;
-}
-.pagenav li>a,.page-navigator li>a{
-	padding:15px 8px;
+	padding:4px 10px;
 	font-size:17px;
+	transition:background 0.3s;
+}
+.pagenav li:hover,.page-navigator li:hover{
+	background:#F8F8FF;
 }
 .saying-avatar img{
 	border-radius:1000px;
@@ -92,10 +94,6 @@ a:hover,a:active{
 }
 .saying-title-info span{
 	color:gray;
-}
-
-.post-header{
-	border:none;
 }
 .post-bread{
 	font-weight:bold;
@@ -181,6 +179,7 @@ a:hover,a:active{
 .read-more{
 	margin-top:-36px;
 }
+
 /* Nb首页大图 */
 .jumbotron{
 	height:50vh;
@@ -248,7 +247,7 @@ a:hover,a:active{
 	background:white;
 	margin-left:-40px;
 	margin-top:0.5em;
-	transition:all 0.4s;
+	transition:box-shadow 0.4s;
 }
 .comment-body:hover{
 	-webkit-box-shadow:0 0 1em #bababa;
@@ -267,7 +266,7 @@ a:hover,a:active{
 	text-shadow:0 0 2px #808080;
 	padding:5px;
 	border-radius:3px;
-	transition:All 0.5s;
+	transition:background 0.5s;
 }
 .OwO-logo:hover{
 	background:rgba(230,230,230,0.9);
@@ -421,7 +420,7 @@ a:hover,a:active{
 	float:right;
 }
 .nav-content ul>li{
-	transition:all 0.5s;
+	transition:background 0.5s;
 }
 .nav-content ul>li:hover{
 	background-color:#F8F8FF
@@ -566,7 +565,7 @@ a:hover,a:active{
 .unvisible-cover{
     opacity:0;
 	display:none;
-	transition:all 0.5s;
+	transition:opacity 0.5s;
 }
 .viewport-cover{
 	height:100vh;
@@ -579,7 +578,7 @@ a:hover,a:active{
 	bottom:0;
 	right:0;
 	left:0;
-	transition:all 0.5s;
+	transition:opacity 0.5s;
 }
 /* 文章内短代码 */
 .tip{
@@ -607,7 +606,7 @@ a:hover,a:active{
 	background-color:rgb(243,247,230)!important;
 }
 .post-stext{
-	max-height:150px;
+	max-height:200px;
 	overflow:auto;
 	padding:5px;
 	padding-left:10px;
