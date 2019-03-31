@@ -1,5 +1,4 @@
 <?php 
-
 	$content = $this->content;
 	
     $content = preg_replace('/<table(.*?)>/s','<table class="table table-striped table-hover">',$content);
@@ -46,6 +45,31 @@
 	$reg = '/\[stext\](.*?)\[\/stext\]/s';
     $rp = '<div class="post-stext">${1}</div>';
     $content = preg_replace($reg,$rp,$content);
+    
+	//解析按钮
+	$reg = '/\[btn url="(.*?)" type="(.*?)" ico="(.*?)"\](.*?)\[\/btn\]/s';
+    $rp = '<a href="${1}" class="btn btn-${2}" target="_blank"><i class="${3}"></i> ${4}</a>';
+    $content = preg_replace($reg,$rp,$content);
+	
+	//解析嵌入块
+	$reg = '/\[well\](.*?)\[\/well\]/s';
+    $rp = '<div class="well">${1}</div>';
+    $content = preg_replace($reg,$rp,$content);
 
+	//解析面板
+	  //无参数面板
+	  $reg = '/\[panel\](.*?)\[\/panel\]/s';
+      $rp = '<div class="panel panel-default"><Div class="panel-body">${1}</div></div>';
+      $content = preg_replace($reg,$rp,$content);
+	  //有标题的面板
+	  $reg = '/\[panel title="(.*?)"\](.*?)\[\/panel\]/s';
+      $rp = '<div class="panel panel-default"><div class="panel-heading">${1}</div><Div class="panel-body">${2}</div></div>';
+      $content = preg_replace($reg,$rp,$content);
+	
+	//解析列表组
+	$reg = '/\[lg\](.*?)\[\/lg\]/s';
+    $rp = '<ul class="list-group">${1}</ul>';
+    $content = preg_replace($reg,$rp,$content);
+	
   echo $content;
 ?>
