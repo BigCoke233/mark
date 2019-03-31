@@ -614,6 +614,11 @@ a:hover,a:active{
 	border-radius:4px;
 	box-shadow:0 0 1px #bababa inset;
 }
+.post-content .list-group{
+	width:100%;
+	margin-left:-20px;
+}
+
 
 /* 滚动条 */
 ::-webkit-scrollbar{
