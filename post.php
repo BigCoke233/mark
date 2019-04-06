@@ -29,6 +29,11 @@
           </div>
 		
 		<hr />
+		<?php if($this->fields->topic && $this->fields->topic!='') :?>
+		<div class="inpost-topic">
+		  <p>“ <Span class="post-topic-content"><?php $this->fields->topic(); ?></span> ”</p>
+		</div>
+		<?php endif; ?>
 		
 		<div class="post-content">
           <?php $this->need('post/post-content.php'); ?>

@@ -28,7 +28,7 @@
     <div class="input-group">
       <input type="text" name="s" class="form-control" placeholder="搜点什么吧~">
       <span class="input-group-btn">
-        <button class="btn btn-default sumbit" type="sumbit"><i class="fa fa-search"></i></button>
+        <button class="btn btn-default sumbit" type="sumbit" data-pjax><i class="fa fa-search"></i></button>
       </span>
     </div>
   </form>
@@ -67,7 +67,7 @@
 	<hr />
 	<ul class="sidebar-category list-group">
         <?php $this->widget('Widget_Metas_Category_List')
-        ->parse('<li class="list-group-item"><a href="{permalink}">{name}</a><span class="badge">{count}</span></li>'); ?>
+        ->parse('<li class="list-group-item"><a href="{permalink}" data-pjax>{name}</a><span class="badge">{count}</span></li>'); ?>
 	</ul>
   </div>
   
@@ -89,7 +89,7 @@
       <?php $this->widget('Widget_Metas_Tag_Cloud', 'sort=mid&ignoreZeroCount=1&desc=0&limit=30')->to($tags); ?>
       <?php if($tags->have()): ?>
       <?php while ($tags->next()): ?>
-      <a href="<?php $tags->permalink(); ?>" title="该标签下有 <?php $tags->count(); ?> 篇文章"><?php $tags->name(); ?></a>
+      <a href="<?php $tags->permalink(); ?>" title="该标签下有 <?php $tags->count(); ?> 篇文章" data-pjax><?php $tags->name(); ?></a>
       <?php endwhile; ?>
       <?php else: ?>
       还没有任何标签哦~

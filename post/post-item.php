@@ -12,10 +12,10 @@
 			  <?php $this->author->gravatar(50) ?>
 			</div>
 		    <div class="col-md-11 col-xs-10">
-			  <h4 class="saying-title"><a href="<?php $this->permalink() ?>"><?php $this->title(); ?></a></h4>
+			  <h4 class="saying-title"><a href="<?php $this->permalink() ?>" data-pjax><?php $this->title(); ?></a></h4>
 	          <div class="saying-info"><?php $this->date('F j, Y'); ?></div>
 			  
-			  <a href="<?php $this->permalink() ?>" class="read-more pull-right btn btn-default">前往吐槽</a>
+			  <a href="<?php $this->permalink() ?>" class="read-more pull-right btn btn-default" data-pjax>前往吐槽</a>
 			</div>
 		  </div>
 	  </div>
@@ -24,7 +24,7 @@
   <?php endif; ?>
 <!-- 小板式文章 -->
 <?php elseif($this->fields->type=='2'): ?>
-  <a href="<?php $this->permalink() ?>" class="post-link">
+  <a href="<?php $this->permalink() ?>" class="post-link" data-pjax>
     <div class="item post-item">
 	  <div class="row">
 	    <div style="height:160px;background:url('<?php $this->fields->banner(); ?>');background-repeat:no-repeat;background-size:cover" class="col-md-3 col-xs-5 post-banner-sm"></div>
@@ -45,7 +45,7 @@
   <br />
 <?php else: ?>
 <!-- 普通文章 -->
-  <a href="<?php $this->permalink() ?>" class="post-link">
+  <a href="<?php $this->permalink() ?>" class="post-link" data-pjax>
     <div class="item post-item">
 	  <?php if ($this->is('index')): ?>
       <div class="post-banner">
@@ -58,6 +58,11 @@
 
       <h2 class="index-post-header"><?php $this->sticky(); $this->title() ?></h4>
       <p class="excerpt">
+	  <?php if($this->fields->topic && $this->fields->topic!='') :?>
+	    <blockquote class="post-topic">
+		  <p><?php $this->fields->topic(); ?></p>
+		</blockquote>
+	  <?php endif; ?>
 	    <?php $this->need('post/post-excerpt.php'); ?>
 		<?php echo $this->excerpt(100); ?>
 	  </p>

@@ -65,8 +65,13 @@
 	  #nav{
 		  padding:0!important;
 	  }
+	  .nav-content{
+		  display:block;
+		  text-align:Center;
+		  margin:0 auto!important;
+	  }
 	  .nav-content,.nav-content ul>li{
-          float:left!important
+          float:left;
 	  }
 	  .nav-content{
 		  font-size:12px;

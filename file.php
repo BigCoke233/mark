@@ -45,7 +45,7 @@
               if ($year > $year_tmp || $mon > $mon_tmp) {
                 $output .= '</ul>';
               }
-              $output .= '<li><span>'. $year_tmp .' - '. $mon_tmp .' | </span><a href="'.$archives->permalink .'">'. $archives->title .'</a><br /></li>';
+              $output .= '<li><span>'. $year_tmp .' - '. $mon_tmp .' | </span><a href="'.$archives->permalink .'" data-pjax>'. $archives->title .'</a><br /></li>';
             }
             $output .= '</ul>';
             echo $output;

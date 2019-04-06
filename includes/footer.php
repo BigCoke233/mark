@@ -8,7 +8,7 @@
 		  	<div class="newest-comment">
 	          <?php $this->widget('Widget_Comments_Recent','ignoreAuthor=true')->to($comments); ?>
 	          <?php while($comments->next()): ?>
-              <a href="<?php $comments->permalink(); ?>"><?php $comments->gravatar(200); ?></a>
+              <a href="<?php $comments->permalink(); ?>" data-pjax><?php $comments->gravatar(200); ?></a>
               <?php endwhile; ?>
 	        </div>
 	    </div>
@@ -44,7 +44,7 @@
   <script>
   //pjax load
   $(document).pjax(
-    'body a',
+    '[data-pjax]',
 	'#pjax-container', 
 	{
 		timeout:8000,

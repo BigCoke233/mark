@@ -18,8 +18,8 @@
 		  <?php $this->options->custom_nav() ?>
 		  <?php else: ?>
 		    <?php $this->widget('Widget_Contents_Page_List')
-            ->parse('<li><a href="{permalink}"><i class="fa fa-paper-plane" aria-hidden="true"></i> {title}</a></li>'); ?>
-		  <li><a href="<?php $this->options->SiteUrl(); ?>"><i class="fa fa-home" aria-hidden="true"></i> 首页</a></li>
+            ->parse('<li><a href="{permalink}" data-pjax><i class="fa fa-paper-plane" aria-hidden="true"></i> {title}</a></li>'); ?>
+		  <li><a data-pjax href="<?php $this->options->SiteUrl(); ?>"><i class="fa fa-home" aria-hidden="true"></i> 首页</a></li>
 		  <?php endif; ?>
 		</ul>
 	  </div>

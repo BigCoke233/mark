@@ -1,7 +1,8 @@
 <?php 
 	$content = $this->content;
 	
-    $content = preg_replace('/<table(.*?)>/s','<table class="table table-striped table-hover">',$content);
+	$content = preg_replace('/<a(.*?)>/s','<a ${1} data-pjax>',$content);
+    $content = preg_replace('/<table(.*?)>/s','<table class="table table-striped table-hover table-bordered">',$content);
 	$content = preg_replace('/<pre><code>/s','<pre><code class="language-html">',$content);
 	$content = preg_replace('/<img(.*?)src="(.*?)"(.*?)alt="(.*?)"(.*?)>/s','<a data-fancybox="gallery" href="${2}" class="gallery-link"><img${1}src="${2}"${3}></a><span class="post-img-alt">${4}</span>',$content); 
 	

@@ -7,6 +7,9 @@ function themeFields($layout) {
     $banner = new Typecho_Widget_Helper_Form_Element_Text('banner', NULL, NULL, _t('文章缩略图'), _t('填入一个图片url作为缩略图，显示在文章列表和文章页面顶部，不填写则没有缩略图'));
     $layout->addItem($banner);
 	
+	$topic = new Typecho_Widget_Helper_Form_Element_Text('topic', NULL, NULL, _t('题记'), _t('输入一段话，作为题记显示在文章列表(仅普通文章有效) 和 文章内页'));
+    $layout->addItem($topic);
+	
 	$type=new Typecho_Widget_Helper_Form_Element_Select('type',array('0'=>'一般文章','1'=>'说说','2'=>'小板式文章(New)'),'0','文章类型');
     $layout->addItem($type);
 }
