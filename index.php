@@ -40,7 +40,7 @@ $this->need('includes/header.php');
       <?php endif; ?>
 	  <!-- 文章列表 -->
 	  <?php while($this->next()): ?>
-        <?php $this->need('includes/post-item.php'); ?>
+        <?php $this->need('post/post-item.php'); ?>
 	  <?php endwhile; ?>
 	  
 	  <div class="pagenav"><?php $this->pageNav('<i class="glyphicon glyphicon-hand-left"></i>', '<i class="glyphicon glyphicon-hand-right"></i>',4, '...'); ?></div>

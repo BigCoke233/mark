@@ -64,7 +64,15 @@
 <!-- 评论开始 -->
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 <div id="comments" class="responsesWrapper">
-
+    <?php
+    $parameter = array(
+        'parentId'      => $this->hidden ? 0 : $this->cid,
+        'parentContent' => $this->row,
+        'respondId'     => $this->respondId,
+        'commentPage'   => $this->request->filter('int')->commentPage,
+        'allowComment'  => $this->allow('comment')
+    );
+    ?>
     <?php if($this->allow('comment')): ?>
     <div id="<?php $this->respondId(); ?>" class="respond item">
 	<br />
@@ -93,15 +101,26 @@
     	</form>
     </div>
     <?php else: ?>
-    <h3><?php _e('评论已关闭'); ?></h3>
+    <div class="item"><h3><?php _e('评论已关闭'); ?></h3></div>
     <?php endif; ?>
 	
     <?php $this->comments()->to($comments); ?>
     <?php if ($comments->have()): ?>
-    <div class="comment-list-wrap">
-    <?php $comments->listComments(); ?>
+	<!-- 解析评论内容 -->
+	<?php
+	  
+	?>
+	
+	<br />
+    <div class="item">
+	  <h3 style="margin-top:-4px;text-align:center;">- <?php $this->commentsNum('评论列表', '已有 1 条评论', '已有 <span class="num">%d</span> 条评论'); ?> -</h3>
+	  <hr style="margin:-10px;margin-top:0;" />
+	  <div class="comment-list-wrap">
+      <?php $comments->listComments(); ?>
+	  </div>
     </div>
-    <?php $comments->pageNav('&laquo; 前一页', '后一页 &raquo;'); ?>
+	<br />
+    <?php $comments->pageNav('&laquo;', '&raquo;'); ?>
     
     <?php endif; ?>
 </div>

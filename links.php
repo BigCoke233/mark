@@ -22,21 +22,10 @@ $this->need('includes/header.php'); ?>
 	      <div class="media-banner" style="background-position:center center;background:url(<?php $this->fields->banner(); ?>);background-repeat:no-repeat;background-size:cover;"></div>
 		</div>
 		<?php endif; ?>
-		
-		  <div class="post-header">
-		    <h2><?php $this->title() ?></h4>
-			<span>
-			  <i class="glyphicon glyphicon-time"></i> <?php $this->date('Y-m-d'); ?>&nbsp;&nbsp;/&nbsp;&nbsp;
-			  <i class="glyphicon glyphicon-bookmark"></i> <?php $this->category(',', true, '木有分类'); ?>&nbsp;&nbsp;/&nbsp;&nbsp;
-			  <i class="glyphicon glyphicon-comment"></i> <?php $this->commentsNum('%d'); ?>
-			</span>
-          </div>
-		
+		<h1 style="text-align:Center"><?php $this->title() ?></h1>
 		<hr />
-		  
 		<div class="links-box">
-		  <h2>友链墙</h2>
-		  <div class="row">
+		  <div class="row" style="margin-top:20px;">
 		    <?php Links_Plugin::output("SHOW_MIX"); ?>
 		  </div>
 		</div>
@@ -44,7 +33,7 @@ $this->need('includes/header.php'); ?>
 		<hr />
 		
 		<div class="post-content">
-          <?php $this->need('includes/post-content.php'); ?>
+          <?php $this->need('post/post-content.php'); ?>
 		</div>
 	  </article>
 	  

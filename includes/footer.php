@@ -1,3 +1,4 @@
+
   <!-- 页脚信息 -->
   <footer class="footer-info">
     <div class="container">
@@ -25,28 +26,20 @@
 	</div>
   </footer>
 
-
+  
   
   <!-- js -->
-  <script type="text/javascript" src="<?php $this->options->themeUrl('assets/js/bootstrap.min.js'); ?>"></script>
   <script type="text/javascript" src="<?php $this->options->themeUrl('assets/js/nav.js'); ?>"></script>
   <script type="text/javascript" src="<?php $this->options->themeUrl('assets/js/jquery.fancybox.min.js'); ?>"></script>
   <script type="text/javascript" src="<?php $this->options->themeUrl('assets/js/owo.js'); ?>"></script>
   <script type="text/javascript" src="<?php $this->options->themeUrl('assets/js/prism.js'); ?>" data-no-instant></script>
+  <script type="text/javascript" src="<?php $this->options->themeUrl('assets/pjax/jquery.pjax.js'); ?>"></script>
+  <script type="text/javascript" src="<?php $this->options->themeUrl('assets/js/nprogress.js'); ?>"></script>
   
   <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
   
-  <!-- pjax 动画 -->
-<div class="spinner unvisible">
-  <div class="rect1"></div>
-  <div class="rect2"></div>
-  <div class="rect3"></div>
-  <div class="rect4"></div>
-  <div class="rect5"></div>
-</div>
-<div class="viewport-cover unvisible-cover"></div>
-  
   <?php if($this->options->pjax && $this->options->pjax!=0) :?>
+
   <!-- pjax -->
   <script>
   //pjax load
@@ -62,14 +55,12 @@
   $(document).on('pjax:send',
   function() {
       $('#pjax-container').addClass("pjax-loading");
-	  $('.spinner').removeClass("unvisible");
-	  $('.viewport-cover').removeClass("unvisible-cover");
+	  NProgress.start();
   })
   $(document).on('pjax:complete',
   function() {
       $('#pjax-container').removeClass("pjax-loading");
-	  $('.spinner').addClass("unvisible");
-	  $('.viewport-cover').addClass("unvisible-cover");
+	  NProgress.done();
 	   if (typeof Prism !== 'undefined') {
        Prism.highlightAll(true,null);}
 	   <?php $this->options->pjax_reload(); ?>

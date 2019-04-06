@@ -20,18 +20,13 @@
 		<?php endif; ?>
 		
 		  <div class="post-header">
-		    <h2><?php $this->title() ?></h4>
-			<span>
-			  <i class="glyphicon glyphicon-time"></i> <?php $this->date('Y-m-d'); ?>&nbsp;&nbsp;/&nbsp;&nbsp;
-			  <i class="glyphicon glyphicon-bookmark"></i> <?php $this->category(',', true, '木有分类'); ?>&nbsp;&nbsp;/&nbsp;&nbsp;
-			  <i class="glyphicon glyphicon-comment"></i> <?php $this->commentsNum('%d'); ?>
-			</span>
+		    <h1 style="text-align:Center"><?php $this->title() ?></h1>
           </div>
 		
 		<hr />
 		
 		<div class="post-content page-content">
-          <?php $this->need('includes/post-content.php'); ?>
+          <?php $this->need('post/post-content.php'); ?>
 		</div>
 
 	  </article>

@@ -20,7 +20,7 @@
 		<?php endif; ?>
 		
 		  <div class="post-header">
-		    <h2><?php $this->title() ?></h4>
+		    <h2><?php $this->title() ?></h2>
 			<span>
 			  <i class="glyphicon glyphicon-time"></i> <?php $this->date('Y-m-d'); ?>&nbsp;&nbsp;/&nbsp;&nbsp;
 			  <i class="glyphicon glyphicon-bookmark"></i> <?php $this->category(',', true, '木有分类'); ?>&nbsp;&nbsp;/&nbsp;&nbsp;
@@ -31,14 +31,20 @@
 		<hr />
 		
 		<div class="post-content">
-          <?php $this->need('includes/post-content.php'); ?>
+          <?php $this->need('post/post-content.php'); ?>
 		</div>
+		
+        <br />
 
 		<div class="post-footer">
-		<hr />
-		  <div class="tags-list">
-		    <?php $this->tags('', true, '没有标签哦~'); ?>
-		  </div>
+		<hr class="item-hr" />
+		<Span class="social-icon-group" align="right">
+		  <a class="social-share icon-google" target="_blank" href="https://plus.google.com/share?url=<?php $this->permalink() ?>" title="分享至Google Plus"><i class="fa fa-google"></i></a>
+          <a class="social-share icon-qzone"  target="_blank" href="https://connect.qq.com/widget/shareqq/index.html?url=<?php $this->permalink() ?>&title=<?php $this->title() ?>&summary=<?php $this->excerpt(100); ?>&pics=<?php $this->fields->banner(); ?>" title="分享至QQ好友"><i class="fa fa-qq"></i></a>
+          <a class="social-share icon-weibo"  target="_blank" href="http://service.weibo.com/share/share.php?url=<?php $this->permalink() ?>/&appkey=<?php $this->options->title(); ?>/&title=<?php $this->title() ?>&pic=<?php $this->fields->banner(); ?>" title="分享至新浪微博"><i class="fa fa-weibo"></i></a>
+          <a class="social-share icon-twitter"  target="_blank" href="https://twitter.com/intent/tweet?text=<?php $this->excerpt(100); ?>&amp;url=<?php $this->permalink() ?>&amp;via=<?php $this->options->SiteUrl(); ?>"><i class="fa fa-twitter" title="分享至Twitter"></i></a> 
+		</span>
+        <hr class="item-hr" />
 		</div>
 	  </article>
 	  
