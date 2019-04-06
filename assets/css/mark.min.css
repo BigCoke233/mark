@@ -47,6 +47,28 @@ a:hover,a:active{
 	margin-top:5px;
 }
 /* 文章及文章列表 */
+.post-topic{
+	color:gray;
+	font-size:15px;
+	padding:4px;
+	padding-left:10px;
+	margin-bottom:5px;
+}
+.inpost-topic{
+	text-align:center;
+	font-size:24px;
+	color:gray;
+	border-top:1px solid #ddd;
+	border-bottom:1px solid #ddd;
+	padding-top:20px;
+	padding-bottom:15px;
+	font-family:宋体;
+	font-weight:bold;
+}
+.post-topic-content{
+	font-family:微软雅黑;
+	font-weight:normal
+}
 .post-item{
 	transition:all 0.5s;
 	overflow:hidden;
@@ -258,6 +280,7 @@ a:hover,a:active{
 }
 .comment-child .comment-child{
 	margin-left:-40px;
+	margin-top:10px;
 }
 .comment-reply a{
 	font-size:1em;
