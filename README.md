@@ -1,6 +1,6 @@
 # NOTICE
-使用前请务必查看[wiki](https://github.com/BigCoke233/mark/wiki)
-使用前请务必查看[wiki](https://github.com/BigCoke233/mark/wiki)
+使用前请务必查看[wiki](https://github.com/BigCoke233/mark/wiki)  
+使用前请务必查看[wiki](https://github.com/BigCoke233/mark/wiki)  
 使用前请务必查看[wiki](https://github.com/BigCoke233/mark/wiki)
 
 # 介绍
