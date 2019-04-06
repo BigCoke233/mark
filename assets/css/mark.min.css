@@ -12,14 +12,26 @@ body{
 p{
 	font-size:1.1em;
 }
+.post-content a{
+	color:#4D90FE;
+	border-bottom:1px solid #4D90FE;
+	display:inline-block;
+	padding-bottom:0!important;
+}
 a{
 	color:black;
+}
+a,.post-content a{
 	transition:all 0.3s;
 }
 a:hover,a:active{
 	opacity:0.9;
 	text-decoration:none;
-	color:#808080;
+	color:#4D90FE;
+}
+.gallery-link{
+	border:none!important;
+	padding:0!important;
 }
 /* 各种css */
 .item{
@@ -28,6 +40,12 @@ a:hover,a:active{
 	-webkit-box-shadow:0 0 8px #ccc;
 	padding:15px;
 }
+.item-hr{
+	margin-left:-15px;
+	margin-right:-15px;
+	margin-bottom:5px;
+	margin-top:5px;
+}
 /* 文章及文章列表 */
 .post-item{
 	transition:all 0.5s;
@@ -35,7 +53,7 @@ a:hover,a:active{
 }
 .post-item:hover{
 	box-shadow:0 2px 12px #ccc;
-	-webkit-box-shadow:0 2px 12px #ccc;
+	-webkit-box-shadow:0 2px 16px #ccc;
 }
 .post-header{
 	margin-top:20px;
@@ -61,7 +79,7 @@ a:hover,a:active{
 	margin-bottom:-15px;
 }
 .post-banner{
-	margin-bottom:10px;
+	margin-bottom:20px!important;
 	margin:-15px;
 	padding:0;
 }
@@ -100,7 +118,7 @@ a:hover,a:active{
 	padding:10px;
 }
 .item{
-	font-family:华文细黑,微软雅黑;
+	font-family:微软雅黑;
 }
 .post-content,.page-content{
 	margin-top:30px;
@@ -129,7 +147,7 @@ a:hover,a:active{
 	margin-top:26px;
 	margin-bottom:26px;
 	padding:12px;
-	font-weight:bold;
+	font-weight:normal;
 }
 .post-content blockquote{
 	background:#F8F8FF;
@@ -179,14 +197,22 @@ a:hover,a:active{
 .read-more{
 	margin-top:-36px;
 }
+/* 社会图标及打赏 */
+.social-share{
+	display:inline-block;
+	font-size:28px;
+	color:#bababa;
+	letter-spacing:20px;
+}
+
 
 /* Nb首页大图 */
 .jumbotron{
-	height:50vh;
+	height:60vh;
 	box-shadow:0 0 10px #808080;
 	color:white;
 	text-align:Center;
-	padding-top:20vh;
+	padding-top:25vh;
 	text-shadow:0 0 10px #bababa;
 }
 /* 评论 */
@@ -203,11 +229,9 @@ a:hover,a:active{
 	resize:none;
 	padding:10px;
 }
-.comment-body{
-	background-color:#fff;
-	box-shadow:0 0 8px #ccc;
-	-webkit-box-shadow:0 0 8px #ccc;
-	padding:15px;
+.comment-list-wrap{
+	margin-left:-40px;
+	padding:20px;
 }
 .comment-list-wrap ol{
 	list-style-type:none;
@@ -222,6 +246,18 @@ a:hover,a:active{
 }
 .comment-reply{
 	text-align:right;
+	visibility:hidden;
+	margin-top:-20px;
+}
+.comment-body:hover .comment-reply{
+	visibility:visible!important;
+}
+.comment-parent{
+	border-bottom:1px solid #F5F5F5;
+	margin-top:20px;
+}
+.comment-child .comment-child{
+	margin-left:-40px;
 }
 .comment-reply a{
 	font-size:1em;
@@ -241,24 +277,10 @@ a:hover,a:active{
 	-webkit-box-shadow:0 0 0.55em #bababa;
 	margin-right:0.3em;
 }
-.comment-body{
-	padding:1em;
-	-webkit-box-shadow:0 0 0.5em #bababa;
-	background:white;
-	margin-left:-40px;
-	margin-top:0.5em;
-	transition:box-shadow 0.4s;
-}
-.comment-body:hover{
-	-webkit-box-shadow:0 0 1em #bababa;
-	opacity:1
-}
 .comment-meta a{
 	color:#bababa;
 	font-size:10px;
 }
-
-
 /* owo */
 .OwO-logo{
 	display:inline-block;
@@ -333,6 +355,12 @@ a:hover,a:active{
 /* 侧边栏 */
 .sidebar li,.sidebar li>a{
 	color:gray;
+}
+.sidebar .list-group>li{
+	transition:background 0.4s;
+}
+.sidebar .list-group>li:hover{
+	background:#F6F6EF;
 }
 .avatar-bg{
 	background-repeat:no-repeat;
@@ -439,6 +467,7 @@ a:hover,a:active{
 /* 友链 */
 .links-box{
     margin:10px;
+	margin-top:30px;
 }
 .links-box h2{
 	text-align:Center;
@@ -451,15 +480,20 @@ a:hover,a:active{
 }
 .links-item{
 	background:#fff;
-	border:1px solid #dcdcdc;
-	box-shadow:0 0 26px #bababa;
-    -webkit-box-shadow:0 0 26px #bababa;	
+	box-shadow:0 2px 1px #ddd;
+    -webkit-box-shadow:0 1px 2px #ddd;	
 	overflow:hidden;
 	transition:all 0.2s!important;
-	margin-bottom:15px;
+	margin-bottom:20px;
 }
 .links-item:hover{
-	transform:scale(0.95)
+	transform:scale(1.05);
+	box-shadow:0 6px 22px #ddd;
+    -webkit-box-shadow:0 6px 22px #ddd;	
+	transform:translateY(-6px);
+}
+.link-box a{
+	color:black;
 }
 .links-title{
 	text-align:Center;
@@ -468,7 +502,6 @@ a:hover,a:active{
 	font-weight:bold;
 	letter-spacing:2px;
 	white-space: nowrap;
-	text-shadow:0 0 1px #808080;
 }
 /* 归档 */
 .archive-list ul{
@@ -490,7 +523,7 @@ a:hover,a:active{
 
 /* pjax */
 .pjax-loading{
-	opacity:0.8;
+	opacity:0.4;
 }
 .pjax-loadend{
 	opacity:1;
@@ -499,87 +532,6 @@ a:hover,a:active{
 	transition:opacity 0.5s;
 }
 
-.unvisible{
-	display:none;!important;
-}
-
-.spinner {
-  margin: 100px auto;
-  width: 50px;
-  height: 60px;
-  text-align: center;
-  font-size: 10px;
-  z-index:9999;
-  position: fixed;
-  margin: 100px auto;
-  top:30vh;
-  bottom:30vh;
-  left:30vw;
-  right:30vw;
-}
- 
-.spinner > div {
-  background-color: #00BFFF;
-  height: 100%;
-  width: 6px;
-  display: inline-block;
-   
-  -webkit-animation: stretchdelay 1.2s infinite ease-in-out;
-  animation: stretchdelay 1.2s infinite ease-in-out;
-}
- 
-.spinner .rect2 {
-  -webkit-animation-delay: -1.1s;
-  animation-delay: -1.1s;
-}
- 
-.spinner .rect3 {
-  -webkit-animation-delay: -1.0s;
-  animation-delay: -1.0s;
-}
- 
-.spinner .rect4 {
-  -webkit-animation-delay: -0.9s;
-  animation-delay: -0.9s;
-}
- 
-.spinner .rect5 {
-  -webkit-animation-delay: -0.8s;
-  animation-delay: -0.8s;
-}
- 
-@-webkit-keyframes stretchdelay {
-  0%, 40%, 100% { -webkit-transform: scaleY(0.4) } 
-  20% { -webkit-transform: scaleY(1.0) }
-}
- 
-@keyframes stretchdelay {
-  0%, 40%, 100% {
-    transform: scaleY(0.4);
-    -webkit-transform: scaleY(0.4);
-  }  20% {
-    transform: scaleY(1.0);
-    -webkit-transform: scaleY(1.0);
-  }
-}
-.unvisible-cover{
-    opacity:0;
-	display:none;
-	transition:opacity 0.5s;
-}
-.viewport-cover{
-	height:100vh;
-	width:100vw;
-	background:#fff;
-	opacity:0.5;
-	z-index:100;
-	position:fixed;
-	top:0;
-	bottom:0;
-	right:0;
-	left:0;
-	transition:opacity 0.5s;
-}
 /* 文章内短代码 */
 .tip{
 	display:block;
@@ -587,7 +539,7 @@ a:hover,a:active{
 	background-color:rgb(250,250,250);
 	border-left:5px solid #ddd;
 	border-radius:2px;
-	color:#A9A9A9;
+	color:#332244;
 }
 .tip.lblue{
 	border-color:#4D90FE!important;
@@ -614,9 +566,9 @@ a:hover,a:active{
 	border-radius:4px;
 	box-shadow:0 0 1px #bababa inset;
 }
-.post-content .list-group{
-	width:100%;
-	margin-left:-20px;
+.post-content a.btn{
+	padding-bottom:6px!important;
+	color:white;
 }
 
 
