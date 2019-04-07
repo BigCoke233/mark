@@ -148,11 +148,12 @@ a:hover,a:active{
 	padding:10px;
 }
 .item{
-	font-family:微软雅黑;
+	font-family:Noto Serif CJK SC,思源宋体,微软雅黑
 }
 .post-content,.page-content{
 	margin-top:30px;
 	font-size:1.2em;
+	letter-spacing:2px;
 }
 .post-content img{
 	max-width:100%;
@@ -270,35 +271,28 @@ a:hover,a:active{
 }
 .comment-reply{
 	text-align:right;
-	visibility:hidden;
 	margin-top:-20px;
 }
-.comment-body:hover .comment-reply{
-	visibility:visible!important;
-}
 .comment-body{
+	margin-top:10px;
 	margin-left:-40px;
 	box-shadow:0 0 5px #bababa;
 	list-style-type:none;
 	background:#fff;
 	padding:15px;
+	font-size:13px;
 }
 .comment-child{
+	margin-top:10px;
     background:rgba(255,250,250,0);
+	margin:2px;
+	margin-left:-40px;
+}
+.comment-title{
+	margin:0;
 }
 .fn{
 	font-style:normal!important;
-}
-.comment-by-author>.fn:after{
-	content:"博主";
-	background:	#00BFFF;
-	color:white;
-	padding:2px 5px;
-	border-radius:2px;
-	font-style:normal;
-	margin-left:5px;
-	box-shadow:0 0 1px #6cf;
-	-webkit-box-shadow:0 0 2px #6cf;
 }
 .comment-reply a{
 	font-size:1em;
