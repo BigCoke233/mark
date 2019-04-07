@@ -112,13 +112,12 @@
 	?>
 	
 	<br />
-    <div class="item">
-	  <h3 style="margin-top:-4px;text-align:center;">- <?php $this->commentsNum('评论列表', '已有 1 条评论', '已有 <span class="num">%d</span> 条评论'); ?> -</h3>
-	  <hr style="margin:-10px;margin-top:0;" />
+
+	  <div class="item"><h3 style="margin-top:-4px;text-align:center;"><?php $this->commentsNum('评论列表', '已有 1 条评论', '已有 <span class="num">%d</span> 条评论'); ?> (o゜▽゜)o☆</h3></div>
 	  <div class="comment-list-wrap">
       <?php $comments->listComments(); ?>
 	  </div>
-    </div>
+
 	<br />
     <?php $comments->pageNav('&laquo;', '&raquo;'); ?>
     

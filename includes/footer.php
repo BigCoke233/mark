@@ -3,7 +3,7 @@
   <footer class="footer-info">
     <div class="container">
 	  <div class="row">
-	    <div class="col-md-5">
+	    <div class="col-md-5 mobile-none">
 	      <h3>最新访客</h3>
 		  	<div class="newest-comment">
 	          <?php $this->widget('Widget_Comments_Recent','ignoreAuthor=true')->to($comments); ?>

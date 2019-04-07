@@ -52,7 +52,7 @@
   
     <!-- 部分css -->
 	<style>
-	@media screen and (max-width: 600px) {
+	@media screen and (max-width: 700px) {
       .mobile-none {
           display:none;
       }
