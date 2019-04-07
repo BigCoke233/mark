@@ -34,6 +34,9 @@ a:hover,a:active{
 	padding:0!important;
 }
 /* 各种css */
+.item,.comment-body{
+	border-radius:2px;
+}
 .item{
 	background-color:#fff;
 	box-shadow:0 0 8px #ccc;
@@ -104,9 +107,14 @@ a:hover,a:active{
 	margin-bottom:20px!important;
 	margin:-15px;
 	padding:0;
+	overflow:hidden;
 }
 .media-banner{
 	height:20em;
+	transition:transform 0.6s;
+}
+.media-banner:hover{
+	transform:scale(1.3);
 }
 .page-navigator{
 	margin-left:-40px;
@@ -236,6 +244,7 @@ a:hover,a:active{
 	text-align:Center;
 	padding-top:25vh;
 	text-shadow:0 0 10px #bababa;
+	font-family:华文细黑,微软雅黑
 }
 /* 评论 */
 .comment-normal-img{
@@ -250,13 +259,6 @@ a:hover,a:active{
 	border:1px solid #DCDCDC;
 	resize:none;
 	padding:10px;
-}
-.comment-list-wrap{
-	margin-left:-40px;
-	padding:20px;
-}
-.comment-list-wrap ol{
-	list-style-type:none;
 }
 .comment-list a{
 	color:black;
@@ -274,13 +276,29 @@ a:hover,a:active{
 .comment-body:hover .comment-reply{
 	visibility:visible!important;
 }
-.comment-parent{
-	border-bottom:1px solid #F5F5F5;
-	margin-top:20px;
-}
-.comment-child .comment-child{
+.comment-body{
 	margin-left:-40px;
-	margin-top:10px;
+	box-shadow:0 0 5px #bababa;
+	list-style-type:none;
+	background:#fff;
+	padding:15px;
+}
+.comment-child{
+    background:rgba(255,250,250,0);
+}
+.fn{
+	font-style:normal!important;
+}
+.comment-by-author>.fn:after{
+	content:"博主";
+	background:	#00BFFF;
+	color:white;
+	padding:2px 5px;
+	border-radius:2px;
+	font-style:normal;
+	margin-left:5px;
+	box-shadow:0 0 1px #6cf;
+	-webkit-box-shadow:0 0 2px #6cf;
 }
 .comment-reply a{
 	font-size:1em;
@@ -296,9 +314,8 @@ a:hover,a:active{
 	background:#F0F8FF;
 }
 .avatar{
-	border-radius:1000px;
-	-webkit-box-shadow:0 0 0.55em #bababa;
 	margin-right:0.3em;
+	border-radius:10000px;
 }
 .comment-meta a{
 	color:#bababa;
@@ -450,14 +467,15 @@ a:hover,a:active{
 }
 .tags-list a:hover{
 	background-color:#DCDCDC;
+	color:black;
 }
 
 /* 导航 */
 #nav{
 	width:100vw;
 	background:#fff;
-	box-shadow:0 0 10px #bababa;
-	-webkit-box-shadow:0 0 10px #bababa;
+	box-shadow:0 0 20px #bababa;
+	-webkit-box-shadow:0 0 20px #bababa;
 	font-size:20px;
 	z-index:55;
     padding-top:10px;
@@ -592,6 +610,19 @@ a:hover,a:active{
 .post-content a.btn{
 	padding-bottom:6px!important;
 	color:white;
+}
+.collapse{
+	border-radius:2px;
+	box-shadow:0 0 6px #bababa;
+	-webkit-box-shadow:0 0 6px #bababa;
+	color:black;
+}
+.collapse-body{
+	height:0;
+	transition:height 0.2s;
+}
+.collapse-title:active .collapse-body{
+	height:auto;
 }
 
 
