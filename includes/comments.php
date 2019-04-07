@@ -101,7 +101,7 @@
     	</form>
     </div>
     <?php else: ?>
-    <div class="item"><h3><?php _e('评论已关闭'); ?></h3></div>
+    <div class="item"><h3 class="comment-title"><?php _e('评论已关闭'); ?></h3></div>
     <?php endif; ?>
 	
     <?php $this->comments()->to($comments); ?>
@@ -113,7 +113,7 @@
 	
 	<br />
 
-	  <div class="item"><h3 style="margin-top:-4px;text-align:center;"><?php $this->commentsNum('评论列表', '已有 1 条评论', '已有 <span class="num">%d</span> 条评论'); ?> (o゜▽゜)o☆</h3></div>
+	  <div class="item"><h3 style="margin-top:-4px;text-align:center;" class="comment-title"><?php $this->commentsNum('评论列表', '已有 1 条评论', '已有 <span class="num">%d</span> 条评论'); ?> (o゜▽゜)o☆</h3></div>
 	  <div class="comment-list-wrap">
       <?php $comments->listComments(); ?>
 	  </div>
