@@ -57,12 +57,12 @@
 
 
       <h2 class="index-post-header"><?php $this->sticky(); $this->title() ?></h4>
-      <p class="excerpt">
 	  <?php if($this->fields->topic && $this->fields->topic!='') :?>
 	    <blockquote class="post-topic">
 		  <p><?php $this->fields->topic(); ?></p>
 		</blockquote>
 	  <?php endif; ?>
+	  <p class="excerpt">
 	    <?php $this->need('post/post-excerpt.php'); ?>
 		<?php echo $this->excerpt(100); ?>
 	  </p>
