@@ -76,6 +76,13 @@
 
   <?php endif; ?>
   <script>
+  <?php if ($this->is('index')): ?>
+  //进展提示
+  mdui.snackbar({
+    message: '欢迎来到 <?php $this->options->title(); ?>！',
+    position: 'right-top'
+  });
+  <?php endif; ?>
   //prism highlight-code load
 $(document).ready(function(){
     var doc_pre = $(".post-content pre");

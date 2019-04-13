@@ -60,8 +60,7 @@
     };
 })();
 </script>
-
-<!-- 评论开始 -->
+<!-- 表单开始 -->
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 <div id="comments" class="responsesWrapper">
     <?php
@@ -75,8 +74,11 @@
     ?>
     <?php if($this->allow('comment')): ?>
     <div id="<?php $this->respondId(); ?>" class="respond item">
-	<br />
-    	<form method="post" action="<?php $this->commentUrl() ?>" id="comment-form" class="comment-form row" role="form">
+	<h3 style="margin-top:0">发射弹幕</h3>
+	<hr class="item-hr" />
+	    
+    	<form style="margin-top:20px;" id="comment_form" method="post" action="<?php $this->commentUrl() ?>"  class="comment-form row" role="form">
+		  <div class="comment-form-comment form-group">
     		<p class="comment-form-comment col-md-12">
                 <textarea rows="8" cols="50" name="text" id="owo-textarea" class="textarea" required ><?php $this->remember('text'); ?></textarea>
             </p>
@@ -98,28 +100,25 @@
 			<p class="form-submit col-md-12">
                 <button type="submit" class="submit btn btn-info " style="float:right;transition:all 0.5s;"><?php _e('提交评论'); ?></button>
             </p>
+		  </div>
     	</form>
     </div>
+	<br />
+	
     <?php else: ?>
     <div class="item"><h3 class="comment-title"><?php _e('评论已关闭'); ?></h3></div>
     <?php endif; ?>
 	
     <?php $this->comments()->to($comments); ?>
     <?php if ($comments->have()): ?>
-	<!-- 解析评论内容 -->
-	<?php
-	  
-	?>
-	
-	<br />
 
 	  <div class="item"><h3 style="margin-top:-4px;text-align:center;" class="comment-title"><?php $this->commentsNum('评论列表', '已有 1 条评论', '已有 <span class="num">%d</span> 条评论'); ?> (o゜▽゜)o☆</h3></div>
 	  <div class="comment-list-wrap">
       <?php $comments->listComments(); ?>
 	  </div>
 
-	<br />
     <?php $comments->pageNav('&laquo;', '&raquo;'); ?>
     
     <?php endif; ?>
+
 </div>

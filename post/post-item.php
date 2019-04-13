@@ -15,7 +15,7 @@
 			  <h4 class="saying-title"><a href="<?php $this->permalink() ?>" data-pjax><?php $this->title(); ?></a></h4>
 	          <div class="saying-info"><?php $this->date('F j, Y'); ?></div>
 			  
-			  <a href="<?php $this->permalink() ?>" class="read-more pull-right btn btn-default" data-pjax>前往吐槽</a>
+			  <a href="<?php $this->permalink() ?>" style="margin-top:-40px;" class="read-more pull-right mdui-btn mdui-ripple" data-pjax>前往吐槽</a>
 			</div>
 		  </div>
 	  </div>

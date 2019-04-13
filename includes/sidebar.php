@@ -89,7 +89,7 @@
       <?php $this->widget('Widget_Metas_Tag_Cloud', 'sort=mid&ignoreZeroCount=1&desc=0&limit=30')->to($tags); ?>
       <?php if($tags->have()): ?>
       <?php while ($tags->next()): ?>
-      <a href="<?php $tags->permalink(); ?>" title="该标签下有 <?php $tags->count(); ?> 篇文章" data-pjax><?php $tags->name(); ?></a>
+      <a class="mdui-ripple" href="<?php $tags->permalink(); ?>" title="该标签下有 <?php $tags->count(); ?> 篇文章" data-pjax><?php $tags->name(); ?></a>
       <?php endwhile; ?>
       <?php else: ?>
       还没有任何标签哦~

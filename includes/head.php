@@ -45,10 +45,12 @@
 	<link rel="stylesheet" type="text/css" href="<?php $this->options->themeUrl('assets/css/prism.css'); ?>" />
 	<link rel="stylesheet" type="text/css" href="<?php $this->options->themeUrl('assets/css/owo.min.css'); ?>" />
     <link rel="stylesheet" type="text/css" href="<?php $this->options->themeUrl('assets/css/nprogress.css'); ?>" />
-  
+	<link rel="stylesheet" type="text/css" href="<?php $this->options->themeUrl('assets/css/mdui.min.css'); ?>" />
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC" rel="stylesheet">
+	
     <!-- 部分js -->
 	<script type="text/javascript" src="<?php $this->options->themeUrl('assets/js/jquery.min.js'); ?>"></script>
-	<script type="text/javascript" src="<?php $this->options->themeUrl('assets/js/bootstrap.min.js'); ?>"></script>
+	<script type="text/javascript" src="<?php $this->options->themeUrl('assets/js/mdui.min.js'); ?>"></script>
   
     <!-- 部分css -->
 	<style>

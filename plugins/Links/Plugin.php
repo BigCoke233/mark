@@ -267,7 +267,7 @@ class Links_Plugin implements Typecho_Plugin_Interface
 		} else if ($pattern == "SHOW_MIX") {
 			$pattern = "
 			<a href=\"{url}\" target=\"_blank\" title=\"{title}\" class=\"links-link\">
-			<div class=\"col-md-3 col-xs-6 col-sm-4\">
+			<div class=\"col-md-3 col-xs-4\">
 			  <div class=\"links-item\">
 			    <div class=\"links-img\" style=\"background:url('{image}');width: 100%;padding-top: 100%;background-repeat: no-repeat;background-size: cover;\"></div>
 				<div class=\"links-title\">

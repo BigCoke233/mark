@@ -32,8 +32,8 @@
 		
 		<hr />
 		
-		<div class="archive-list">
-          <ul class="post-ul">
+		<div class="archive" style="font-size:16px;">
+          <ul class="mdui-list">
            <?php
             $stat = Typecho_Widget::widget('Widget_Stat');
             $this->widget('Widget_Contents_Post_Recent', 'pageSize='.$stat->publishedPostsNum)->to($archives);
@@ -45,7 +45,7 @@
               if ($year > $year_tmp || $mon > $mon_tmp) {
                 $output .= '</ul>';
               }
-              $output .= '<li><span>'. $year_tmp .' - '. $mon_tmp .' | </span><a href="'.$archives->permalink .'" data-pjax>'. $archives->title .'</a><br /></li>';
+              $output .= '<a href="'.$archives->permalink .'" data-pjax><li class="mdui-list-item mdui-ripple"><span style="color:gray">'. $year_tmp .' - '. $mon_tmp .'&nbsp;|&nbsp;</span>'. $archives->title .'<br /></li></a>';
             }
             $output .= '</ul>';
             echo $output;
