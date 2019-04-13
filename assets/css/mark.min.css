@@ -7,14 +7,14 @@
 
 /* 全局样式 */
 body{
-	background-color:#F8F8FF
+	background-color:#F8F8FF!important;
+	font-family:'Noto Serif SC'!important;
 }
 p{
 	font-size:1.1em;
 }
 .post-content a{
-	color:#4D90FE;
-	border-bottom:1px solid #4D90FE;
+	border-bottom:1px solid black;
 	display:inline-block;
 	padding-bottom:0!important;
 }
@@ -27,7 +27,6 @@ a,.post-content a{
 a:hover,a:active{
 	opacity:0.9;
 	text-decoration:none;
-	color:#4D90FE;
 }
 .gallery-link{
 	border:none!important;
@@ -147,9 +146,6 @@ a:hover,a:active{
 	font-weight:bold;
 	padding:10px;
 }
-.item{
-	font-family:Noto Serif CJK SC,思源宋体,微软雅黑
-}
 .post-content,.page-content{
 	margin-top:30px;
 	font-size:1.2em;
@@ -160,8 +156,8 @@ a:hover,a:active{
 	border-radius:2px;
 	box-shadow:0 0 5px #808080;
 	-webkit-box-shadow:0 0 5px #808080;
-	display:block;
-	margin:12px auto;
+	display:block!important;
+	margin:10px auto!important;
 	transition:box-shadow 0.5s;
 }
 .post-content img:hover{
@@ -173,12 +169,16 @@ a:hover,a:active{
 }
 .post-content h2{
 	border-left:3px solid #6495ED;
-	background-color:#F8F8FF;
 	margin:-15px;
 	margin-top:26px;
 	margin-bottom:26px;
-	padding:12px;
+	padding-left:12px;
 	font-weight:normal;
+}
+.post-content h3:before{
+	content:"# ";
+	color:#6495ED;
+	font-weight:bold;
 }
 .post-content blockquote{
 	background:#F8F8FF;
@@ -245,7 +245,7 @@ a:hover,a:active{
 	text-align:Center;
 	padding-top:25vh;
 	text-shadow:0 0 10px #bababa;
-	font-family:华文细黑,微软雅黑
+	font-weight:bold
 }
 /* 评论 */
 .comment-normal-img{
@@ -271,7 +271,6 @@ a:hover,a:active{
 }
 .comment-reply{
 	text-align:right;
-	margin-top:-20px;
 }
 .comment-body{
 	margin-top:10px;
