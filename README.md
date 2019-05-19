@@ -1,3 +1,5 @@
+[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
+[![Github all releases](https://img.shields.io/github/downloads/Naereen/StrapDown.js/total.svg)](https://GitHub.com/Naereen/StrapDown.js/releases/)
 # NOTICE
 使用前请务必查看[wiki](https://github.com/BigCoke233/mark/wiki)  
 使用前请务必查看[wiki](https://github.com/BigCoke233/mark/wiki)  
