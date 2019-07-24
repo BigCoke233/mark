@@ -1,9 +1,5 @@
-[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
-[![Github all releases](https://img.shields.io/github/downloads/Naereen/StrapDown.js/total.svg)](https://GitHub.com/Naereen/StrapDown.js/releases/)
-# NOTICE
-使用前请务必查看[wiki](https://github.com/BigCoke233/mark/wiki)  
-使用前请务必查看[wiki](https://github.com/BigCoke233/mark/wiki)  
-使用前请务必查看[wiki](https://github.com/BigCoke233/mark/wiki)
+# 注意
+Mark 主题目前处于半弃坑的状态，有问题请查看 wiki
 
 # 介绍
   Mark主题是我前前后后花费了1个月进行维护（其实也没有，一个多月之中的每个周末而已），之后又重写发布了2.0.0版本的一款简洁双栏主题。并且Mark永久免费，弃不弃坑我就说不定了~
