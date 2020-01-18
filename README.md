@@ -38,3 +38,9 @@ Mark 主题目前处于半弃坑的状态，有问题请查看 wiki
 
 # BUG
 暂未发现bug，如果有任何问题欢迎`issues`。
+
+# Secret Code
+它总会在别的地方派上用场。
+```
+JTNDcm9vdCUzRS9oYXBweS1uZXcteWVhci1lbmQvc3VjY2Vzcy5odG1s
+```
