@@ -34,7 +34,7 @@ Mark 主题目前处于半弃坑的状态，有问题请查看 wiki
 - [ ] 文章目录
 
 # 演示
-[Demo](https://cokewithice.com)
+[Demo](https://mark-demo.guhub.cn)
 
 # BUG
 暂未发现bug，如果有任何问题欢迎`issues`。
